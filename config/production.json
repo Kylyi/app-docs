@@ -1,0 +1,16 @@
+{
+  "externalLinks": [],
+  "api": {
+    "root": "",
+    "help": ""
+  },
+  "sessionTimeoutMinutes": 30,
+  "locale": "en-US",
+  "confirmation": {
+    "editable": false,
+    "enabled": true,
+    "required": false
+  },
+  "environmentColor": "",
+  "useInsensitiveFilter": false
+}

@@ -1,0 +1,13 @@
+import '../shared/timestamps'
+import './user'
+
+model UserOptions extends Timestamps {
+  id     Int  @id @default(autoincrement())
+
+  // Relations
+  /// The user ID that these options belong to
+  userId Int  @unique
+
+  /// The user that these options belong to
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

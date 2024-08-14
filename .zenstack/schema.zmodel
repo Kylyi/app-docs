@@ -1,0 +1,32 @@
+// Core
+import './models/claim'
+import './models/file'
+import './models/log'
+import './models/role'
+import './models/table-layout'
+import './models/user'
+import './models/user-options'
+
+// Libs
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["relationJoins"]
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator zod {
+  provider                         = "zod-prisma-types"
+  createOptionalDefaultValuesTypes = true
+  createRelationValuesTypes        = true
+  createPartialTypes               = true
+}
+
+generator json {
+  provider = "prisma-json-types-generator"
+}

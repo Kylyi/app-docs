@@ -1,0 +1,24 @@
+import '../shared/timestamps'
+import './user'
+
+model TableLayout extends Timestamps {
+  id         Int       @id @default(autoincrement())
+
+  /// Name of the table layout
+  name       String
+
+  isPublic  Boolean   @default(false)
+
+  /// Name of the table
+  tableName  String
+
+  /// Schema of the table
+  schema     String
+
+  // Relations
+  /// The user ID for which the table layout is created
+  userId     Int?
+
+  /// The user for which the table layout is created
+  user       User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

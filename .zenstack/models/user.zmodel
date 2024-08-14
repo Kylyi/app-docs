@@ -1,0 +1,34 @@
+import '../shared/timestamps'
+import './claim'
+import './file'
+import './user-options'
+import './role'
+import './table-layout'
+
+model User extends Timestamps {
+  id            Int                       @id @default(autoincrement())
+
+  /// The user's first name
+  /// @zod.string.min(1)
+  firstName     String
+
+  /// The user's last name
+  /// @zod.string.min(1)
+  lastName      String
+
+  // Relations
+  /// The user's avatar file ID
+  avatarId      Int?                      @unique
+
+  /// The user's avatar file
+  avatar        File?                     @relation("Avatar", fields: [avatarId], references: [id])
+
+  /// The user's options
+  options       UserOptions?
+
+  /// The user's roles
+  roles         Role[]
+
+  /// The user's saved table layouts
+  tableLayouts  TableLayout[]
+}

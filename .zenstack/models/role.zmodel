@@ -1,0 +1,21 @@
+import '../shared/timestamps'
+import './claim'
+import './user'
+
+model Role extends Timestamps {
+  id          Int     @id @default(autoincrement())
+
+  /// Role name
+  /// @zod.string.min(1)
+  name        String
+
+  /// Role description
+  description String?
+
+  // Relations
+  /// Claims that this role has
+  claims      Claim[]
+
+  /// Users that have this role
+  users       User[]
+}

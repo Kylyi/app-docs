@@ -1,0 +1,130 @@
+{
+  "files.eol": "\n",
+  "i18n-ally.localesPaths": [
+    "i18n",
+    "utils/i18n"
+  ],
+  "files.exclude": {
+    "**/.npmrc": true,
+    "**/node_modules": true,
+    "**/tsconfig.json": true,
+    "**/tsconfig.build.json": true,
+    "package*.json": true,
+    "pnpm-lock.yaml": true,
+    "**/.gitignore": true,
+    "**/.eslintrc*": true,
+    "**/dist": true,
+    "**/.editorconfig": true,
+    "**/.prettierrc": true,
+    "**/schema.gql": true,
+    "**/nest-cli.json": true,
+    "**/app.e2e-spec.ts": true,
+    // "*[d|D]ocker*": true,
+    ".nuxt": true,
+    ".output": true,
+    ".gitmodules": true,
+    "yarn.lock": true
+  },
+  "search.exclude": {
+    "**/.npmrc": false,
+    "**/tsconfig.json": false,
+    "**/tsconfig.build.json": false,
+    "package*.json": false,
+    "**/.gitignore": false,
+    "**/.eslintrc*": false,
+    "**/.editorconfig": false,
+    "**/.prettierrc": false,
+    "**/schema.gql": false,
+    "**/nest-cli.json": false,
+    "*[d|D]ocker*": false,
+    ".nuxt": false,
+    ".gitmodules": false
+  },
+  // Enable the ESlint flat config support
+  "eslint.useFlatConfig": false,
+  "i18n-ally.keystyle": "nested",
+  "folderTemplates.templateFolderPath": ".fttemplates",
+  "betterTypeScriptErrors.prettify": true,
+  "extensions.experimental.affinity": {
+    "better-ts-errors.better-ts-errors": 1
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": false,
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    {
+      "rule": "style/*",
+      "severity": "off"
+    },
+    {
+      "rule": "format/*",
+      "severity": "off"
+    },
+    {
+      "rule": "*-indent",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spaces",
+      "severity": "off"
+    },
+    {
+      "rule": "*-order",
+      "severity": "off"
+    },
+    {
+      "rule": "*-dangle",
+      "severity": "off"
+    },
+    {
+      "rule": "*-newline",
+      "severity": "off"
+    },
+    {
+      "rule": "*quotes",
+      "severity": "off"
+    },
+    {
+      "rule": "*semi",
+      "severity": "off"
+    }
+  ],
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "gql",
+    "graphql"
+  ],
+
+  // Turn off auto fix for prefer-const
+  "eslint.codeActionsOnSave.rules": [
+    "!unused-imports/no-unused-imports",
+    "*"
+  ],
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "scss.lint.unknownAtRules": "ignore",
+  "i18n-ally.displayLanguage": "cs-CZ",
+  "vsc-nodecmd.packageNotifications": false
+}

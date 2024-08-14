@@ -1,0 +1,7 @@
+import '../../../server/prisma/timestamps'
+
+model [FTName | PascalCase] extends Timestamps {
+  id        Int     @id @default(autoincrement())
+
+  @@allow('all', true)
+}

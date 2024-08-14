@@ -1,0 +1,19 @@
+import '../shared/timestamps'
+
+model Log extends Timestamps {
+  id Int @id @default(autoincrement())
+
+  /// ID of the entity that was affected
+  entityId Int
+
+  /// The operation that was performed
+  operation String
+
+  /// The entity that was affected (model)
+  entity String
+
+  /// The difference/change
+  diff String
+
+  @@allow('all', true)
+}

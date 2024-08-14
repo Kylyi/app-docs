@@ -1,0 +1,23 @@
+import '../shared/timestamps'
+import './role'
+import './user'
+
+model Claim extends Timestamps {
+  id          Int     @id @default(autoincrement())
+
+  /// Name of the claim
+  /// @zod.string.min(1)
+  name        String  @unique
+
+  /// Description of the claim
+  description String?
+
+  // Relations
+  /// Roles that have this claim
+  roles       Role[]
+
+  /// Users that have this claim as a direct claim
+  // users       User[]
+
+  @@allow('all', true)
+}

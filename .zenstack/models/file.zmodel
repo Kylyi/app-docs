@@ -1,0 +1,25 @@
+import '../shared/timestamps'
+import './user'
+
+model File extends Timestamps {
+  id         Int       @id @default(autoincrement())
+
+  /// File name
+  name       String
+
+  /// File type
+  type       String
+
+  /// File size
+  size       Int
+
+  /// File path
+  path       String    @unique
+
+  /// A note for the file
+  note       String?
+
+  // Relations
+  /// User Avatar
+  user       User?     @relation("Avatar")
+}
