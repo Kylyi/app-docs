@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: kylyi/app-core:latest
+    image: kylyi/app-docs:latest
 
     environment:
       - 'VITE_ENV=${VITE_ENV}'
@@ -14,13 +14,9 @@ services:
       - 'FILES_HOST=${FILES_HOST}'
 
     ports:
-      - 3000:3000
+      - 3055:3000
 
     volumes:
       - ./node_modules:/app/node_modules
       - ./files:/usr/src/app/files
       - ./errors:/usr/src/app/errors
-
-volumes:
-  postgres:
-    name: pgDb
