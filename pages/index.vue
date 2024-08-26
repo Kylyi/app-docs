@@ -1,11 +1,13 @@
 <script setup lang="ts">
-const x = ref()
+
 </script>
 
 <template>
   <PageWrapper>
-    <div>
-      Kokos
-    </div>
+    <Btn
+      label="Test button"
+      bg="red"
+      color="white"
+    />
   </PageWrapper>
 </template>
