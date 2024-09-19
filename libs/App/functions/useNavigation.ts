@@ -10,9 +10,27 @@ export function useNavigation() {
       // Dashboard
       {
         id: 'button',
-        label: $t('general.dashboard'),
+        label: 'Button',
         icon: 'i-formkit:button',
         to: $p('/components/button'),
+      },
+      {
+        id: 'checkbox',
+        label: 'Checkbox',
+        icon: 'i-eva:checkmark-square-2-outline',
+        to: $p('/components/checkbox'),
+      },
+      {
+        id: 'radio',
+        label: 'Radio',
+        icon: 'i-eva:radio-button-on-outline',
+        to: $p('/components/radio'),
+      },
+      {
+        id: 'toggle',
+        label: 'Toggle',
+        icon: 'i-eva:toggle-left-outline',
+        to: $p('/components/toggle'),
       },
     ]
   })
